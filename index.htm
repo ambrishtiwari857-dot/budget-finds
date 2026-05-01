@@ -1,114 +1,261 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>🔥 IPL Jersey Deals</title>
-  <style>
-    body {
-      font-family: Arial;
-      background: #f1f5f9;
-      margin: 0;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Budget Finds – IPL Jersey Deals</title>
 
-    header {
-      background: #0f172a;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      font-size: 22px;
-    }
+<style>
+:root{
+  --bg:#0b1220;
+  --card:#111a2e;
+  --accent:#ff6a00;
+  --accent2:#ffb703;
+  --text:#e6ecff;
+  --muted:#9fb0ff;
+  --success:#22c55e;
+}
 
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
-    }
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Arial, sans-serif;
+  background:linear-gradient(180deg,#0b1220,#0f1730);
+  color:var(--text);
+}
 
-    .card {
-      background: white;
-      width: 250px;
-      margin: 10px;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
+/* Header */
+header{
+  position:sticky; top:0; z-index:10;
+  backdrop-filter: blur(10px);
+  background:rgba(11,18,32,.6);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav{
+  max-width:1100px; margin:auto; padding:12px 16px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.logo{font-weight:700; letter-spacing:.5px}
+.cta{
+  background:linear-gradient(45deg,var(--accent),var(--accent2));
+  color:#111; padding:8px 12px; border-radius:8px; text-decoration:none;
+  font-weight:600;
+}
 
-    .title {
-      font-size: 16px;
-      margin: 10px 0;
-    }
+/* Hero */
+.hero{
+  max-width:1100px; margin:20px auto; padding:20px 16px;
+  display:grid; gap:16px;
+}
+.hero-box{
+  background: radial-gradient(1200px 200px at 10% 0%, #1c2a55, transparent),
+              linear-gradient(180deg,#111a2e,#0e1530);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px; padding:20px;
+}
+.hero h1{margin:0 0 6px}
+.hero p{margin:0 0 12px; color:var(--muted)}
+.badges{
+  display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;
+}
+.badge{
+  font-size:12px; padding:6px 10px; border-radius:999px;
+  background:#16224a; border:1px solid rgba(255,255,255,.08);
+}
 
-    .price {
-      color: green;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
+/* Trust bar */
+.trust{
+  max-width:1100px; margin:10px auto; padding:0 16px 10px;
+  display:flex; gap:10px; flex-wrap:wrap; justify-content:center;
+}
+.trust .t{
+  font-size:12px; padding:8px 10px; border-radius:10px;
+  background:#0e1836; border:1px solid rgba(255,255,255,.08);
+}
 
-    .btn {
-      background: #ff9900;
-      color: white;
-      padding: 10px;
-      text-decoration: none;
-      display: block;
-      border-radius: 5px;
-    }
+/* Grid */
+.container{
+  max-width:1100px; margin:10px auto 30px; padding:0 16px;
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:14px;
+}
 
-    .btn:hover {
-      background: #e68a00;
-    }
-  </style>
+/* Card */
+.card{
+  background:linear-gradient(180deg,#111a2e,#0d1430);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px; overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+  transition:.2s ease;
+}
+.card:hover{transform:translateY(-4px)}
+.img{
+  width:100%; height:190px; object-fit:cover;
+}
+.content{padding:12px}
+.title{font-size:15px; margin:4px 0 6px}
+.row{
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom:10px;
+}
+.price{color:var(--success); font-weight:700}
+.tag{
+  font-size:11px; padding:4px 8px; border-radius:999px;
+  background:#1b2a55; border:1px solid rgba(255,255,255,.08);
+}
+.btn{
+  display:block; text-align:center; text-decoration:none;
+  padding:10px; border-radius:10px;
+  background:linear-gradient(45deg,var(--accent),var(--accent2));
+  color:#111; font-weight:700;
+}
+
+/* Footer */
+footer{
+  border-top:1px solid rgba(255,255,255,.08);
+  background:#0b1220;
+}
+.foot{
+  max-width:1100px; margin:auto; padding:16px;
+  text-align:center; font-size:12px; color:#aab7ff;
+}
+</style>
 </head>
 
 <body>
 
-<header>🔥 IPL Jersey Deals (Limited Offer)</header>
+<header>
+  <div class="nav">
+    <div class="logo">🔥 Budget Finds</div>
+    <a href="#" class="cta">Best Deals</a>
+  </div>
+</header>
 
+<section class="hero">
+  <div class="hero-box">
+    <h1>IPL Jersey Deals – Limited Offer ⚡</h1>
+    <p>Trending jerseys under budget. Prices may change—grab fast!</p>
+    <div class="badges">
+      <div class="badge">Under ₹500</div>
+      <div class="badge">Top Picks</div>
+      <div class="badge">Fan Favorites</div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="t">⚡ Fast Delivery</div>
+  <div class="t">🔁 Easy Returns</div>
+  <div class="t">💸 Best Prices</div>
+  <div class="t">🔒 Secure Checkout</div>
+</div>
+
+<!-- PRODUCTS -->
 <div class="container">
 
   <div class="card">
-    <div class="title">CSK Thala Jersey 🟡</div>
-    <div class="price">₹429 🔥</div>
-    <a href="https://amzn.to/49g4BHF" target="_blank" class="btn">Buy Now</a>
+    <img src="images/rcb.jpg" class="img">
+    <div class="content">
+      <div class="title">RCB Jersey ❤️</div>
+      <div class="row">
+        <div class="price">₹249</div>
+        <div class="tag">Best Deal</div>
+      </div>
+      <a href="https://amzn.to/4n3pQCs" target="_blank" class="btn">Buy Now</a>
+    </div>
   </div>
 
   <div class="card">
-    <div class="title">Punjab Kings Jersey 🔴</div>
-    <div class="price">₹399 🔥</div>
-    <a href="https://amzn.to/4umziDp" target="_blank" class="btn">Buy Now</a>
+    <img src="images/csk.jpg" class="img">
+    <div class="content">
+      <div class="title">CSK Thala Jersey 🟡</div>
+      <div class="row">
+        <div class="price">₹429</div>
+        <div class="tag">Popular</div>
+      </div>
+      <a href="https://amzn.to/49g4BHF" target="_blank" class="btn">Buy Now</a>
+    </div>
   </div>
 
   <div class="card">
-    <div class="title">Rajasthan Royals Jersey 🔵</div>
-    <div class="price">₹349 🔥</div>
-    <a href="https://amzn.to/4vTodeu" target="_blank" class="btn">Buy Now</a>
+    <img src="images/punjab.jpg" class="img">
+    <div class="content">
+      <div class="title">Punjab Kings Jersey 🔴</div>
+      <div class="row">
+        <div class="price">₹399</div>
+        <div class="tag">Hot</div>
+      </div>
+      <a href="https://amzn.to/4umziDp" target="_blank" class="btn">Buy Now</a>
+    </div>
   </div>
 
   <div class="card">
-    <div class="title">Mumbai Indians Jersey 🔵</div>
-    <div class="price">₹399 🔥</div>
-    <a href="https://amzn.to/4emf7k9" target="_blank" class="btn">Buy Now</a>
+    <img src="images/rajasthan.jpg" class="img">
+    <div class="content">
+      <div class="title">Rajasthan Royals Jersey 🔵</div>
+      <div class="row">
+        <div class="price">₹349</div>
+        <div class="tag">Budget</div>
+      </div>
+      <a href="https://amzn.to/4vTodeu" target="_blank" class="btn">Buy Now</a>
+    </div>
   </div>
 
   <div class="card">
-    <div class="title">KKR Jersey 🟣</div>
-    <div class="price">₹399 🔥</div>
-    <a href="https://amzn.to/4eVxBrX" target="_blank" class="btn">Buy Now</a>
+    <img src="images/mumbai.jpg" class="img">
+    <div class="content">
+      <div class="title">Mumbai Indians Jersey 🔵</div>
+      <div class="row">
+        <div class="price">₹399</div>
+        <div class="tag">Top Rated</div>
+      </div>
+      <a href="https://amzn.to/4emf7k9" target="_blank" class="btn">Buy Now</a>
+    </div>
   </div>
 
   <div class="card">
-    <div class="title">Lucknow Super Giants Jersey 💙</div>
-    <div class="price">₹1199 🔥</div>
-    <a href="https://amzn.to/49owmOn" target="_blank" class="btn">Buy Now</a>
+    <img src="images/kkr.jpg" class="img">
+    <div class="content">
+      <div class="title">KKR Jersey 🟣</div>
+      <div class="row">
+        <div class="price">₹399</div>
+        <div class="tag">Trending</div>
+      </div>
+      <a href="https://amzn.to/4eVxBrX" target="_blank" class="btn">Buy Now</a>
+    </div>
   </div>
 
   <div class="card">
-    <div class="title">Sunrisers Hyderabad Jersey 🧡</div>
-    <div class="price">₹399 🔥</div>
-    <a href="https://amzn.to/3OCzf7n" target="_blank" class="btn">Buy Now</a>
+    <img src="images/hyderabad.jpg" class="img">
+    <div class="content">
+      <div class="title">SRH Jersey 🧡</div>
+      <div class="row">
+        <div class="price">₹399</div>
+        <div class="tag">Hot</div>
+      </div>
+      <a href="https://amzn.to/3OCzf7n" target="_blank" class="btn">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/lucknow.jpg" class="img">
+    <div class="content">
+      <div class="title">LSG Jersey 💙</div>
+      <div class="row">
+        <div class="price">₹1199</div>
+        <div class="tag">Premium</div>
+      </div>
+      <a href="https://amzn.to/49owmOn" target="_blank" class="btn">Buy Now</a>
+    </div>
   </div>
 
 </div>
 
+<footer>
+  <div class="foot">
+    Disclaimer: As an affiliate, we may earn from qualifying purchases. Prices may change.
+  </div>
+</footer>
+
 </body>
-</html>
+    </html>
